@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="carbon">Вуглець</label>
+        <input class="input-field" type="text" placeholder="Вуглець" id="carbon" name="carbon">
+
+        <label for="hydrogen">Водень</label>
+        <input class="input-field" type="text" placeholder="Водень" id="hydrogen" name="hydrogen">
+
+        <label for="sulfur">Сірка</label>
+        <input class="input-field" type="text" placeholder="Сірка" id="sulfur" name="sulfur">
+
+        <label for="vanadium">Ванадій</label>
+        <input class="input-field" type="text" placeholder="Ванадій" id="vanadium" name="vanadium">
+
+        <label for="oxygen">Кисень</label>
+        <input class="input-field" type="text" placeholder="Кисень" id="oxygen" name="oxygen">
+
+        <label for="moisture">Волога</label>
+        <input class="input-field" type="text" placeholder="Волога" id="moisture" name="moisture">
+
+        <label for="ash">Зола</label>
+        <input class="input-field" type="text" placeholder="Зола" id="ash" name="ash">
+
+        <label for="wormth">Нижча теплота згоряння горючої маси</label>
+        <input class="input-field" type="text" placeholder="Нижча теплота згоряння" id="wormth" name="wormth">
+
+        <button type="submit">Розрахувати</button>
+    </form>
+    {{ if .WorkComponents }}
+    <h2><pre>{{ .WorkComponents }}</pre></h2>
+    {{end}}
+    {{if .WorkWormth}}
+    <h2><pre>{{ .WorkWormth }}</pre></h2>
+    {{end}}
+</body>
+</html>

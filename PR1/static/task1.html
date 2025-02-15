@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="carbon">Вуглець</label>
+        <input class="input-field" type="text" placeholder="Вуглець" id="carbon" name="carbon">
+
+        <label for="hydrogen">Водень</label>
+        <input class="input-field" type="text" placeholder="Водень" id="hydrogen" name="hydrogen">
+
+        <label for="sulfur">Сірка</label>
+        <input class="input-field" type="text" placeholder="Сірка" id="sulfur" name="sulfur">
+
+        <label for="nitrogen">Азот</label>
+        <input class="input-field" type="text" placeholder="Азот" id="nitrogen" name="nitrogen">
+
+        <label for="oxygen">Кисень</label>
+        <input class="input-field" type="text" placeholder="Кисень" id="oxygen" name="oxygen">
+
+        <label for="moisture">Волога</label>
+        <input class="input-field" type="text" placeholder="Волога" id="moisture" name="moisture">
+
+        <label for="ash">Зола</label>
+        <input class="input-field" type="text" placeholder="Зола" id="ash" name="ash">
+
+        <button type="submit">Розрахувати</button>
+    </form>
+    <div class="results">
+        <h2><pre>{{ .DryComponents}}</pre></h2>
+        <h2><pre>{{ .AshFreeComponents}}</pre></h2>
+    </div>
+    <h2>{{ .WorkWormth }}</h2>
+    <h2>{{ .DryWormth }}</h2>
+    <h2>{{ .AshFreeWormth }}</h2>
+    
+</body>
+</html>
