@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="fuel">Виберіть тип палива</label>
+        <select name="fuel" id="fuel" >
+            <option value="0" {{ if eq .FuelIndex 0 }}selected{{ end }}>Донецьке газове вугілля марки ГР</option>
+            <option value="1" {{ if eq .FuelIndex 1 }}selected{{ end }}>Високосірчистий мазут марки 40</option>
+            <option value="2" {{ if eq .FuelIndex 2 }}selected{{ end }}>Природний газ із газопроводу Уренгой- Ужгород</option>
+        </select>
+        <label for="quantity">Введіть кількість палива</label>
+        <input class="input-field" type="number" step="any" min="0" placeholder="Кількість палива" id="quantity" name="quantity" value="{{ .FuelQuantity }}">
+
+        <button type="submit">Розрахувати</button>
+    </form>
+    <h2>{{ .Result }}</h2>
+
+</body>
+</html>
