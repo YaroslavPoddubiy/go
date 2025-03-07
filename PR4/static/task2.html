@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="power">Потужність КЗ (МВ * А)</label>
+        <input class="input-field" type="number" step="any" min="0" placeholder="Потужність КЗ (МВ * А)" id="power" name="power" value="{{ .Power }}">
+
+        <button type="submit">Розрахувати</button>
+    </form>
+    <h2>{{ .Result }}</h2>
+</body>
+</html>

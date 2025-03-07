@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="voltage">Напруга (кВ)</label>
+        <input class="input-field" type="number" step="any" min="0" placeholder="Напруга (кВ)" id="voltage" name="voltage" value="{{ .Voltage }}">
+
+        <label for="current">Струм КЗ(кА)</label>
+        <input class="input-field" type="number" step="any" min="0" placeholder="Струм КЗ(кА)" id="current" name="current" value="{{ .Current }}">
+
+        <label for="faultDuration">Час вмикання КЗ (с)</label>
+        <input class="input-field" type="number" step="any" min="0" placeholder="Час вмикання КЗ (с)" id="faultDuration" name="faultDuration" value="{{ .FaultDuration }}">
+
+        <label for="load">Очікуване навантаження (кВ * А)</label>
+        <input class="input-field" type="number" step="any" min="0" placeholder="Очікуване навантаження (кВ * А)" id="load" name="load" value="{{ .Load }}">
+
+        <button type="submit">Розрахувати</button>
+    </form>
+    <h2>{{ .Result }}</h2>
+    
+</body>
+</html>
